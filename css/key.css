@@ -1,0 +1,178 @@
+.key {
+    font-size: .9em;
+    padding: 2px 0px 2px 0px;
+    margin: 7px 10px 7px 10px;
+    opacity: .75;
+    color: #fff;
+    border-radius: 7px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    cursor: pointer;
+    background-color: #000;
+    color: #FFF;
+    transition: margin 1s, color 1s;
+    width: 100px;
+    float: left;
+}
+
+.bug {
+    background-color: #9DC148;
+}
+
+.bug.inactive {
+    background-color: rgba(45, 53, 13, 0.2);
+}
+
+.ice {
+    background-color: #5DBCD2;
+}
+
+.ice.inactive {
+    background-color: rgba(45, 53, 13, 0.2);
+}
+
+.fire {
+    background-color: #EC993B;
+}
+
+.fire.inactive{
+    background-color: rgba(45, 53, 13, 0.2);
+}
+
+
+.water {
+    background-color: #2993DA;
+}
+
+.water.inactive {
+    background-color: rgba(45, 53, 13, 0.2);
+}
+
+.grass {
+    background-color: #5DC04E;
+}
+
+.grass.inactive {
+    background-color: rgba(45, 53, 13, 0.2);
+}
+
+.poison {
+    background-color: #9328DA;
+}
+
+.poison.inactive {
+    background-color: rgba(45, 53, 13, 0.2);
+}
+
+.ground {
+    background-color: #DFB980;
+}
+
+.ground.inactive {
+    background-color: rgba(45, 53, 13, 0.2);
+}
+
+.steel {
+    background-color: #A0A0A0;
+}
+
+.steel.inactive {
+    background-color: rgba(45, 53, 13, 0.2);;
+}
+
+.psychic {
+    background-color: #FF007F;
+}
+
+.psychic.inactive {
+    background-color: rgba(45, 53, 13, 0.2);
+}
+
+.rock {
+    background-color: #87632C;
+}
+
+.rock.inactive {
+    background-color: rgba(45, 53, 13, 0.2);
+}
+
+.fighting {
+    background-color: #A12C2C;
+}
+
+.fighting.inactive {
+    background-color: rgba(45, 53, 13, 0.2);
+}
+
+.flying {
+    background-color: #BAADDE;
+}
+
+.flying.inactive {
+    background-color: rgba(45, 53, 13, 0.2);
+}
+
+.normal {
+    background-color: #C4BEAE;
+}
+
+.normal.inactive {
+    background-color: rgba(45, 53, 13, 0.2);
+}
+
+.electric {
+    background-color: #FFDE35;
+}
+
+.electric.inactive {
+    background-color: rgba(45, 53, 13, 0.2);
+}
+
+.ghost {
+    background-color: #60447C;
+}
+
+.ghost.inactive {
+    background-color: rgba(45, 53, 13, 0.2);
+}
+
+.dark {
+    background-color: #5C4638;
+}
+
+.dark.inactive {
+    background-color: rgba(45, 53, 13, 0.2);
+}
+
+.fairy {
+    background-color: #FFCCFF;
+}
+
+.fairy.inactive {
+    background-color: rgba(45, 53, 13, 0.2);
+}
+
+.dragon {
+    background-color: #6600CC;
+}
+
+.dragon.inactive {
+    background-color: rgba(45, 53, 13, 0.2);
+}
+
+#all {
+    float: left;
+    margin: 0px 0px 0px 25px;
+    padding: 2px 10px 2px 10px;
+    width:40%;
+}
+#none {
+    float:left;
+    margin: 0px 25px 0px 25px;
+    padding: 2px 15px 2px 15px;
+    width:40%;
+}
+
+.general.inactive {
+    background-color: rgba(45, 53, 13, 0.2);
+}

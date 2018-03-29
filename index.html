@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Stict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang = "zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/key.css">
+
+<script script type="text/javascript" src="js/d3.js"></script>
+<script script type="text/javascript" src="js/d3.min.js"></script>
+<script script type="text/javascript" src="js/helper.js"></script>
+<script script type="text/javascript" src="js/RadarChart.js"></script>
+
+</head>
+
+<body>
+
+<div id="container">
+	<div id="main">
+		<div id="scatterplot">
+			<strong>Pokemon Scatterchart</strong>
+			<script type="text/javascript" src="js/scatterchart.js"></script>
+		</div>
+		<div id="treemap">
+			<strong>Type Treemap</strong>
+			<script type="text/javascript" src="js/treemap.js"></script>
+		</div>
+		<div id="radarchart">
+			
+			<div id="info">
+			<strong>Pokemon Info</strong>
+			<br>
+			 <span id="pokemon_number">Number:</span> 
+			 <br>
+			 <span id="pokemon_type1">Type1:</span>
+			 <br>
+			 <span id="pokemon_generation">Generation:</span>
+			 <br>
+			 <span id="pokemon_height">Height_m:</span>
+			 <br>
+			 <span id="pokemon_legendary">Legendary:</span>
+			 <br>
+			 <span id="pokemon_mega">Mega_Evolution:</span>
+			 <br>
+			 <span id="pokemon_gender">hasGender:</span>
+			 <br>
+			 <span id="pokemon_egg1">Egg_Group1:</span>
+			</div>
+			
+			<div id="info">
+				<br>
+				<span id="pokemon_name">Name:</span>
+			 	<br>
+			 	<span id="pokemon_type2">Type2:</span>
+			 	<br>
+			 	<span id="pokemon_color">Color:</span>
+			 	<br>
+			 	<span id="pokemon_weight">Weight_kg:</span>
+			 	<br>
+			 	
+				<span id="pokemon_catchrate">Catch Rate:</span>
+			 	<br>
+			 	<span id="pokemon_body">Body_Style:</span>
+			 	<br>
+			 	<span id="pokemon_male">Pr_Male:</span>
+			 	<br>
+			 	<span id="pokemon_egg2">Egg_Group2:</span>
+			</div>
+			
+			<div id="chart"></div>
+			
+			<script>
+				var width = 250,
+					height = 250;
+
+				// Config for the Radar chart
+				var config = {
+					w: width,
+					h: height,
+					maxValue: 100,
+					levels: 5,
+					ExtraWidthX: 100
+				}
+				
+				var data=[
+				[
+				    {area:"HP",value:0},
+				    {area:"Attack",value:0},
+				    {area:"Defense",value:0},
+				    {area:"Speed",value:0},
+				    {area:"Sp_Atk",value:0},
+				    {area:"Sp_Def",value:0}
+			  	]
+			  ];
+			  
+			  RadarChart.draw("#chart", data, config);
+			  
+			</script>
+			
+			<div id="total"><span id="pokemon_total">Total:</span></div>
+			
+		</div>
+		<div id="control">
+		<strong>Control Panel</strong><br>
+			&nbsp X Axis:
+            <select id="XAxis" class="form-control" onchange="changeXAxis(this.value)">
+            	<option value="HP">HP</option>
+                <option value="Attack">Attack</option>
+                <option value="Defense">Defense</option>
+                <option value="Sp_Atk">Sp_Atk</option>
+                <option value="Sp_Def">Sp_Def</option>
+                <option value="Speed">Speed</option>
+            </select>
+            Y Axis:
+            <select id="YAxis" class="form-control" onchange="changeYAxis(this.value)">
+                <option value="Attack">Attack</option>
+                <option value="Defense">Defense</option>
+                <option value="Sp_Atk">Sp_Atk</option>
+                <option value="Sp_Def">Sp_Def</option>
+                <option value="Speed">Speed</option>
+                <option value="HP">HP</option>
+            </select>
+            <br>
+            
+        	<div id="all" onClick="showAll()" class="key general">All</div>
+        	<div id="none" onClick="showNone()" class="key general inactive">None</div>
+        	<div id="Bug" onClick="toggleType(this)" class="key bug">Bug</div>
+	        <div id="Dark" onClick="toggleType(this)" class="key dark">Dark</div>
+	        <div id="Dragon" onClick="toggleType(this)" class="key dragon">Dragon</div>
+	        <div id="Electric" onClick="toggleType(this)" class="key electric">Electric</div>
+	        <div id="Fighting" onClick="toggleType(this)"  class="key fighting">Fighting</div>
+	        <div id="Fire" onClick="toggleType(this)" class="key fire">Fire</div>
+	        <div id="Flying" onClick="toggleType(this)" class="key flying">Flying</div>
+	        <div id="Ghost" onClick="toggleType(this)" class="key ghost">Ghost</div>
+	        <div id="Grass" onClick="toggleType(this)" class="key grass">Grass</div>
+	        <div id="Ground" onClick="toggleType(this)" class="key ground">Ground</div>
+	        <div id="Ice" onClick="toggleType(this)" class="key ice">Ice</div>
+	        <div id="Normal" onClick="toggleType(this)" class="key normal">Normal</div>
+	        <div id="Poison" onClick="toggleType(this)" class="key poison">Poison</div>
+	        <div id="Psychic" onClick="toggleType(this)" class="key psychic">Psychic</div>
+	        <div id="Rock" onClick="toggleType(this)" class="key rock">Rock</div>
+	        <div id="Steel" onClick="toggleType(this)" class="key steel">Steel</div>
+	        <div id="Water" onClick="toggleType(this)" class="key water">Water</div>
+	        <div id="Fairy" onClick="toggleType(this)" class="key fairy">Fairy</div>
+		</div>
+		
+		
+	</div>
+</div>
+
+</body>
+
+</html>
